@@ -16,7 +16,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
   const content = getLandingContent(localeParam);
   const pageUrl = new URL(
     `/${localeParam}`,
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://riyadhelectricianplumber.vercel.app",
   ).toString();
   const localBusiness = {
     "@context": "https://schema.org",
