@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 8.5rem;
+}
+
+html[lang="ar-SA"] body {
+  font-family: "IBM Plex Sans Arabic", Tahoma, sans-serif;
+}
+
+html[lang="ar-SA"] .font-display {
+  font-family: Amiri, Georgia, serif;
+}
+
+.hero-pattern {
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 0),
+    radial-gradient(rgba(16, 185, 129, 0.05) 1px, #0f172a 1px);
+  background-position:
+    0 0,
+    16px 16px;
+  background-size:
+    32px 32px,
+    32px 32px;
+}
+
+.ad-slot {
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.ad-slot-leaderboard {
+  width: min(100%, 728px);
+  min-height: 90px;
+}
+
+.ad-slot-sidebar {
+  width: min(100%, 300px);
+  min-height: 250px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 3px;
+}

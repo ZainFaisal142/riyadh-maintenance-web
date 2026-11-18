@@ -1,0 +1,164 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install website dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check patched Next.js version",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"next@15.5",
+				"version"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Audit runtime dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Fix compatible dependency advisories",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"fix"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Recheck production dependency audit",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check patched PostCSS version",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"postcss",
+				"version"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check patched Sharp version",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"sharp",
+				"version"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Final runtime dependency audit",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect installed Next PostCSS dependency",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"ls",
+				"next",
+				"postcss",
+				"sharp",
+				"--all"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Verify runtime dependency security",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build bilingual maintenance website",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint bilingual maintenance website",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start production website for verification",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Final website lint",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
