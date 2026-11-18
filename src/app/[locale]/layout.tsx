@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getDirection, isLocale, locales } from "@/i18n/config";
 import { headerMessages } from "@/i18n/messages";
@@ -83,6 +84,7 @@ export default async function LocaleLayout({
       <body className="bg-card-bg font-body text-charcoal antialiased">
         <SiteHeader locale={localeParam} messages={headerMessages[localeParam]} />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

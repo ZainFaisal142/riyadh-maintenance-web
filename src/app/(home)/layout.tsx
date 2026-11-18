@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 interface HomeLayoutProps {
   children: ReactNode;
@@ -7,7 +8,10 @@ interface HomeLayoutProps {
 export default function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <html dir="ltr" lang="en-US">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
