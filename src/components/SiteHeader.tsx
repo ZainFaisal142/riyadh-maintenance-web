@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { getOtherLocale, type Locale } from "@/i18n/config";
@@ -79,9 +80,14 @@ export function SiteHeader({ locale, messages }: SiteHeaderProps) {
             className="group flex min-w-0 shrink-0 items-center gap-2.5 sm:gap-3"
             href={`/${locale}#home`}
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-slate-navy text-safety-amber shadow-md transition-transform group-hover:scale-105">
-              <HeaderIcon className="h-6 w-6" name="brand" />
-            </span>
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="h-12 w-12 shrink-0 object-contain transition-transform group-hover:scale-105 sm:h-14 sm:w-14"
+              height={56}
+              src="/images/logo.jpeg"
+              width={56}
+            />
             <span className="min-w-0">
               <span className="block truncate font-display text-base font-bold leading-tight text-slate-navy sm:text-lg lg:text-xl">
                 {messages.brandName}
